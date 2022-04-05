@@ -13,6 +13,8 @@
 		2834725F27FCB17600A4A164 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2834725D27FCB17600A4A164 /* Main.storyboard */; };
 		2834726127FCB17700A4A164 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2834726027FCB17700A4A164 /* Assets.xcassets */; };
 		2834726427FCB17700A4A164 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2834726227FCB17700A4A164 /* LaunchScreen.storyboard */; };
+		2882EA8427FCB93B00B1C68F /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2882EA8327FCB93B00B1C68F /* DataManager.swift */; };
+		2882EA8727FCBDAA00B1C68F /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2882EA8627FCBDAA00B1C68F /* Animation.swift */; };
 		67E369356138751B58B8C392 /* Pods_MySpringAnimationsApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5B0A01E0D5B8AFD6DBFD32A /* Pods_MySpringAnimationsApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +27,8 @@
 		2834726027FCB17700A4A164 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2834726327FCB17700A4A164 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2834726527FCB17700A4A164 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2882EA8327FCB93B00B1C68F /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		2882EA8627FCBDAA00B1C68F /* Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animation.swift; sourceTree = "<group>"; };
 		4CBFAC6C9ECF4BBF734B3298 /* Pods-MySpringAnimationsApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MySpringAnimationsApp.debug.xcconfig"; path = "Target Support Files/Pods-MySpringAnimationsApp/Pods-MySpringAnimationsApp.debug.xcconfig"; sourceTree = "<group>"; };
 		A4FE8524B4FD40C96A7485AF /* Pods-MySpringAnimationsApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MySpringAnimationsApp.release.xcconfig"; path = "Target Support Files/Pods-MySpringAnimationsApp/Pods-MySpringAnimationsApp.release.xcconfig"; sourceTree = "<group>"; };
 		E5B0A01E0D5B8AFD6DBFD32A /* Pods_MySpringAnimationsApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MySpringAnimationsApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -64,6 +68,8 @@
 			isa = PBXGroup;
 			children = (
 				2834726E27FCB1BD00A4A164 /* App */,
+				2882EA8227FCB92500B1C68F /* DataManager */,
+				2882EA8527FCBD8900B1C68F /* Models */,
 				2834726D27FCB1B000A4A164 /* ViewControllers */,
 				2834726C27FCB1A900A4A164 /* Stroyboards */,
 				2834726B27FCB19F00A4A164 /* Resources */,
@@ -106,13 +112,28 @@
 			path = App;
 			sourceTree = "<group>";
 		};
+		2882EA8227FCB92500B1C68F /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				2882EA8327FCB93B00B1C68F /* DataManager.swift */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		2882EA8527FCBD8900B1C68F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2882EA8627FCBDAA00B1C68F /* Animation.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		3CB216606CD297C5EE2AAF51 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				4CBFAC6C9ECF4BBF734B3298 /* Pods-MySpringAnimationsApp.debug.xcconfig */,
 				A4FE8524B4FD40C96A7485AF /* Pods-MySpringAnimationsApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -240,7 +261,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				2834725C27FCB17600A4A164 /* ViewController.swift in Sources */,
+				2882EA8427FCB93B00B1C68F /* DataManager.swift in Sources */,
 				2834725827FCB17600A4A164 /* AppDelegate.swift in Sources */,
+				2882EA8727FCBDAA00B1C68F /* Animation.swift in Sources */,
 				2834725A27FCB17600A4A164 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
