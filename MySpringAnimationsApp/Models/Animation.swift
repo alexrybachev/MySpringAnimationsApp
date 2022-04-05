@@ -8,7 +8,6 @@
 import Foundation
 
 struct Animation {
-    
     let preset: String
     let curve: String
     let force: Double
@@ -17,23 +16,20 @@ struct Animation {
 }
 
 extension Animation {
-    static func getAnimaion() -> [Animation] {
-        var animations: [Animation] = []
+    static func getRandomAnimation() -> Animation {
         let dm = DataManager.shared
         
-        let iteration = min(dm.presets.count, dm.curves.count)
+        let presets = dm.presets.shuffled()
+        let curves = dm.curves.shuffled()
         
-        for index in 0..<iteration {
-            let animation = Animation(
-                preset: dm.presets[index],
-                curve: dm.curves[index],
-                force: Double.random(in: 0.3...1),
-                duration: Double.random(in: 0.3...2),
-                delay: Double.random(in: 0.3...1)
-            )
-            animations.append(animation)
-        }
+        let animation = Animation(
+            preset: presets.first ?? "",
+            curve: curves.first ?? "",
+            force: Double.random(in: 0.3...1),
+            duration: Double.random(in: 0.3...2),
+            delay: Double.random(in: 0.3...1)
+        )
         
-        return animations
+        return animation
     }
 }

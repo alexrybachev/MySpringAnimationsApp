@@ -16,32 +16,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Et8-4v-Sna">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Et8-4v-Sna" customClass="SpringView" customModule="Spring">
                                 <rect key="frame" x="45" y="60" width="230" height="209"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="vOd-yU-qUB">
                                         <rect key="frame" x="16" y="16" width="198" height="177"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TLw-pL-9iY">
-                                                <rect key="frame" x="0.0" y="0.0" width="198" height="32.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="198" height="22.5"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="12o-hL-2uH">
-                                                <rect key="frame" x="0.0" y="48.5" width="198" height="32"/>
+                                                <rect key="frame" x="0.0" y="38.5" width="198" height="22.5"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ogx-I9-RQa">
-                                                <rect key="frame" x="0.0" y="96.5" width="198" height="32.5"/>
+                                                <rect key="frame" x="0.0" y="77" width="198" height="23"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="76g-uD-LwG">
+                                                <rect key="frame" x="0.0" y="116" width="198" height="22.5"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hmP-oe-aym">
-                                                <rect key="frame" x="0.0" y="145" width="198" height="32"/>
+                                                <rect key="frame" x="0.0" y="154.5" width="198" height="22.5"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -72,7 +78,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Button">
+                                <state key="normal" title="Run">
                                     <color key="titleColor" systemColor="systemGreenColor"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -80,6 +86,9 @@
                                         <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="startSpringAnimButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="t2W-sJ-vPp"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -92,6 +101,14 @@
                             <constraint firstItem="u05-6b-uX2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="thq-JR-sUv"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="curveLabel" destination="12o-hL-2uH" id="Doa-aP-pg3"/>
+                        <outlet property="delayLabel" destination="hmP-oe-aym" id="22w-7n-bkY"/>
+                        <outlet property="durationLabel" destination="76g-uD-LwG" id="1Xm-bR-vLB"/>
+                        <outlet property="forceLabel" destination="ogx-I9-RQa" id="ox0-fB-lnE"/>
+                        <outlet property="presetLabel" destination="TLw-pL-9iY" id="vSd-zx-yri"/>
+                        <outlet property="springView" destination="Et8-4v-Sna" id="37k-41-ABh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
