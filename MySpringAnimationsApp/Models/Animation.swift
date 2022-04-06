@@ -23,8 +23,8 @@ extension Animation {
         let curves = dm.curves.shuffled()
         
         let animation = Animation(
-            preset: presets.first ?? "",
-            curve: curves.first ?? "",
+            preset: presets.first?.rawValue ?? "",
+            curve: curves.first?.rawValue ?? "",
             force: Double.random(in: 0.3...1),
             duration: Double.random(in: 0.3...2),
             delay: Double.random(in: 0.3...1)
