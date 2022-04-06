@@ -13,6 +13,16 @@ struct Animation {
     let force: Double
     let duration: Double
     let delay: Double
+    
+    var description: String {
+        """
+        preset: \(preset)
+        curve: \(curve)
+        force: \(String(format: "%.2f", force))
+        duration: \(String(format: "%.2f", duration))
+        delay: \(String(format: "%.2f", delay))
+        """
+    }
 }
 
 extension Animation {
